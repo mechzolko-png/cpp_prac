@@ -1,8 +1,6 @@
 #include <raylib.h>
-#include <iostream>
-#include <string>
 
-using namespace std;
+// using namespace std;
 
 
 struct Player {
@@ -26,8 +24,8 @@ struct ballObject {
 class Game {
     public:
     void applyCollision (int wx, int wy, int* px, int* py, int rad) {
-        cout << "POINTER INF py: " << *py << "\n";
-        cout << "POINTER INF px: " << *px << "\n";
+        // cout << "POINTER INF py: " << *py << "\n";
+        // cout << "POINTER INF px: " << *px << "\n";
         if (wx - rad <= *px) {*px = wx - rad;}
         if (wy - rad <= *py) {*py = wy - rad;}
         if (0 + rad >= *px) {*px = 0 + rad;}
@@ -53,8 +51,8 @@ int main () {
     int worldX = GetScreenWidth();
     int worldY = GetScreenHeight();
 
-    cout << "POINTER INM py: " << *py << "\n";
-    cout << "POINTER INM px: " << *px << "\n";
+    // cout << "POINTER INM py: " << *py << "\n";
+    // cout << "POINTER INM px: " << *px << "\n";
 
     while (!WindowShouldClose()) {
 
